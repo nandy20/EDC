@@ -31,7 +31,8 @@
                android:layout_width="match_parent"
                android:layout_height="358dp"
                android:layout_weight="4"
-               android:src="@drawable/team"
+               android:src="@drawable/sycon1"
+               android:padding="16dp"
                android:background="@drawable/roundimage"/>
 
 

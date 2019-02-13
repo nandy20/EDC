@@ -1,12 +1,15 @@
 package com.example.nandhini.edc;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 
 /**
@@ -61,13 +64,22 @@ public class TicketFragment extends android.support.v4.app.Fragment {
         }
     }
 
+    ImageView buttonview ;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootview =  inflater.inflate(R.layout.fragment_ticket, container, false);
 
+        buttonview = (ImageView) rootview.findViewById(R.id.sycon19img);
 
+        buttonview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getActivity(),Sycon19Activity.class);
+                startActivity(intent);
+            }
+        });
 
         return rootview;
     }

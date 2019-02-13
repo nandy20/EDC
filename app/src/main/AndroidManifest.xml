@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ImagesActivity" />
-        <activity android:name=".SyconActivity"></activity>
+        <activity android:name=".SyconActivity" />
+        <activity android:name=".Sycon19Activity"></activity>
     </application>
 
 </manifest>

@@ -37,17 +37,35 @@
                 android:layout_weight="2"
                 android:id="@+id/laksya"/>
 
-
-            <Button
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/sycon"
-                android:text="E    V    E    N    T    S"
+                android:layout_height="wrap_content"
+                android:text="EVENTS "
                 android:textColor="@color/Sycon"
-                android:textSize="18sp"
-                android:onClick="SyconHome"
-                style = "@style/MainButton"
-                android:background="@drawable/eventsring"/>
+                android:textSize="32sp"
+                android:layout_margin="16dp"
+                android:layout_marginTop="32dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardElevation="20dp"
+                android:background="@color/Sycon"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:id="@+id/sycon"
+                    android:onClick="SyconHome"
+                    android:src="@drawable/sycon2"
+                    android:layout_marginBottom="32dp"
+                    android:background="@color/Sycon"/>
+
+            </android.support.v7.widget.CardView>
 
             <TextView
                 android:layout_width="match_parent"
@@ -57,7 +75,8 @@
                 android:textSize="32sp"
                 android:textColor="@color/Sycon"
                 android:textStyle="bold"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -75,7 +94,7 @@
                 android:textColor="@color/Sycon"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                android:text="The SSN Entrepreneurship Development Cell “Lakshya” was formed a few years ago with a handful of enthusiasts and has evolved over its short lifespan into a powerful student body that boasts of 700+ members, all of whom are active participants in various entrepreneurial activities undertaken by Lakshya. Lakshya has always aimed at celebrating the evergreen spirit of entrepreneurship by conducting a plethora of events that kindles the entrepreneurial spirit within students. Ever since its inception it has had a profound impact on the lives and thinking of the “Young India”. Our E-cell lifted the prestigious E-week India trophy during the years 2010 and 2011 under the guidance of the National Entrepreneurship Network (NEN), a Dr. Romesh Wadhwani foundation, and were adjudged runners-up for the same during the years 2012 and 2013. "
+                android:text="The SSN Entrepreneurship Development Cell “Lakshya” was formed a few years ago with a handful of enthusiasts and has evolved over its short lifespan into a powerful student body that boasts of 700+ members, all of whom are active participants in various entrepreneurial activities undertaken by Lakshya. Lakshya has always aimed at celebrating the evergreen spirit of entrepreneurship by conducting a plethora of events that kindles the entrepreneurial spirit within students. Ever since its inception it has had a profound impact on the lives and thinking of the “Young India”. "
                 android:paddingBottom="16dp"
                 />
 

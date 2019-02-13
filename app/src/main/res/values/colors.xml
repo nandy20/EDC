@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fc0509</color>
+    <color name="colorPrimaryDark">#f60a21</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="Sycon">#FED029</color>
+    <color name="SyconColor">#151F35</color>
+</resources>

@@ -39,6 +39,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Enter"
+                        android:fontFamily="@font/caviardreams_bold"
                         android:textSize="48dp"
                         android:layout_gravity="center"
                         android:textColor="@color/Sycon"/>
@@ -47,6 +48,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="SYcon '19"
+                        android:fontFamily="@font/caviardreams_bold"
                         android:textSize="32dp"
                         android:layout_gravity="center"
                         android:textColor="@color/Sycon"/>

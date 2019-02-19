@@ -72,7 +72,7 @@
                     android:layout_marginBottom="32dp"
                     android:background="@color/Sycon"/>
 
-
+                    <!--
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -81,6 +81,7 @@
                         android:textColor="@color/SubscriptColor"
                         android:layout_alignParentBottom="true"
                         android:text="Click to visit page" />
+                        -->
 
 
 

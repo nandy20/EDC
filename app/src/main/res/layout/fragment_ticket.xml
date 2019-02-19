@@ -20,13 +20,14 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:id="@+id/buttonview">
+
                 <ImageView
                     android:id="@+id/sycon19img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/sylogo"
                     android:layout_gravity="center"
-                    android:layout_margin="16dp"/>
+                    android:layout_margin="16dp"
+                    android:src="@drawable/sylogo" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

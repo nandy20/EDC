@@ -8,6 +8,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -64,14 +65,14 @@ public class TicketFragment extends android.support.v4.app.Fragment {
         }
     }
 
-    ImageView buttonview ;
+    Button buttonview ;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootview =  inflater.inflate(R.layout.fragment_ticket, container, false);
 
-        buttonview = (ImageView) rootview.findViewById(R.id.sycon19img);
+        buttonview = rootview.findViewById(R.id.sycon19button);
 
         buttonview.setOnClickListener(new View.OnClickListener() {
             @Override

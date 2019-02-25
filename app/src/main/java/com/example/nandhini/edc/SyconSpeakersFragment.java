@@ -4,10 +4,17 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 
 
 public class SyconSpeakersFragment extends android.support.v4.app.Fragment {
@@ -53,15 +60,57 @@ public class SyconSpeakersFragment extends android.support.v4.app.Fragment {
         }
     }
 
+
+    ArrayList <SpeakerItems> speakerlist;
+    private WebView wikiview;
+    CardView wikiCardView;
+
+    private boolean wikiOpened;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootview =  inflater.inflate(R.layout.fragment_sycon_speakers, container, false);
 
+        createSpeakersList();
 
+        wikiview= (WebView) rootview.findViewById(R.id.webview);
+        wikiview.setWebViewClient(new WebViewClient());
+        wikiCardView = rootview.findViewById(R.id.wikicardview);
+
+        ListView listview = (ListView) rootview.findViewById(R.id.speakerlistview);
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if(wikiOpened == true){
+                    wikiCardView.setVisibility(View.GONE);
+                    wikiOpened = false;
+
+                } else {
+                    wikiOpened = true;
+                    wikiCardView.setVisibility(View.VISIBLE);
+                    wikiview.loadUrl(speakerlist.get(position).getWikiLink());
+                    Toast.makeText(getActivity(), speakerlist.get(position).getSname(), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
+
+        SpeakersAdapter adapter = new SpeakersAdapter(getActivity(),speakerlist);
+
+        listview.setAdapter(adapter);
 
         return rootview;
+    }
+
+    void createSpeakersList(){
+        speakerlist = new ArrayList<SpeakerItems>(20);
+        speakerlist.add(new SpeakerItems(R.drawable.balaji_sampath,"Founder AID India","Founder Ahaguru"," ","Dr. BALAJI SAMPATH","https://en.wikipedia.org/wiki/Balaji_Sampath"));
+        speakerlist.add(new SpeakerItems(R.drawable.raj_aru,"Channel Director , ","PutChutney"," ","Mr. RAJMOHAN ARMUGHAM","https://www.edexlive.com/live-story/2017/sep/26/presenting-rajmohan-arumugam-the-man-from-put-chutney-who-makes-you-sit-up-and-listen-to-him-1221.html"));
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -165,47 +165,6 @@ public class SyconHomeFragment extends android.support.v4.app.Fragment {
         date = new Date();
         cal = Calendar.getInstance();
         time2=dateFormat.format(cal.getTime());
-        if (savedInstanceState != null){
-            selected = savedInstanceState.getInt(MENU_SELECTED);
-        }
-        ImageAdapter imageAdapter=new ImageAdapter(getActivity());
-        viewPager=(ViewPager)rootview.findViewById(R.id.ViewPager);
-        textView=(TextView) rootview.findViewById(R.id.textView);
-        linearLayout=(LinearLayout)rootview.findViewById(R.id.LinearLayout);
-        viewPager.setAdapter(imageAdapter);
-        imageAdapter=new ImageAdapter(getActivity());
-        viewPager.setAdapter(imageAdapter);
-        dotcount=imageAdapter.getCount();
-        dot=new ImageView[dotcount];
-        for(int i=0;i<dotcount;i++){
-            dot[i]=new ImageView(getActivity());
-            dot[i].setImageDrawable(ContextCompat.getDrawable(getActivity().getApplicationContext(),R.drawable.nonactive_dot));
-            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(0,0,0,0);
-            linearLayout.addView(dot[i],params);
-
-        }
-        dot[0].setImageDrawable(ContextCompat.getDrawable(getActivity().getApplicationContext(),R.drawable.active_dot));
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int i, float v, int i1) {
-                Log.i("PagePresent",String.valueOf(i));
-                textView.setText(names[i]);
-            }
-            @Override
-            public void onPageSelected(int position) {
-                int i;
-                for(i=0;i<dotcount;i++){
-                    dot[i].setImageDrawable(ContextCompat.getDrawable(getActivity().getApplicationContext(),R.drawable.nonactive_dot));
-                }
-                dot[position].setImageDrawable(ContextCompat.getDrawable(getActivity().getApplicationContext(),R.drawable.active_dot));
-            }
-            @Override
-            public void onPageScrollStateChanged(int i) {
-
-            }
-        });
-
         return rootview;
     }
 

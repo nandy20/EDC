@@ -127,7 +127,6 @@ public class ImagesActivity extends AppCompatActivity {
         }
         ImageAdapter imageAdapter=new ImageAdapter(this);
          viewPager=(ViewPager)findViewById(R.id.ViewPager);
-         textView=(TextView)findViewById(R.id.textView);
          linearLayout=(LinearLayout)findViewById(R.id.LinearLayout);
         viewPager.setAdapter(imageAdapter);
         imageAdapter=new ImageAdapter(this);

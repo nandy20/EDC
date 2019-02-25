@@ -10,25 +10,11 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DrawerLayout mdrawerlayout;
-    private ActionBarDrawerToggle mtoggle;
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (mtoggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mdrawerlayout=(DrawerLayout)findViewById(R.id.drawer);
-        mtoggle=new ActionBarDrawerToggle(this,mdrawerlayout,R.string.open,R.string.close);
-        mdrawerlayout.addDrawerListener(mtoggle);
-        mtoggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void SyconHome(View view){
